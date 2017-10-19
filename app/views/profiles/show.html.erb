@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Username:</strong>
+  <%= @profile.username %>
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @profile.first_name %>
 </p>
@@ -15,10 +20,30 @@
   <%= @profile.last_name %>
 </p>
 
+<p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @profile.postcode %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @profile.country %>
+</p>
+
 <!-- <p>
   <strong>User:</strong>
   <%#= @profile.user %>
 </p> -->
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%#= link_to 'Edit', edit_profile_path %>
+<%#= link_to 'Back', profiles_path %>
