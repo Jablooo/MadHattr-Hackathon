@@ -14,4 +14,22 @@
  *= require_self
  */
 
- @import "bootstrap";
+.logo_box {
+  width: 90%;
+}
+
+.logo_home {
+  width: 100%;
+}
+
+.card_field {
+  text-align: center;
+}
+
+.text_fields {
+  text-align: center;
+}
+
+.footer_links {
+  text-align: center;
+}
