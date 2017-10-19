@@ -13,7 +13,12 @@
 
   <div class="field">
     <%= form.label :avatar_data %>
-    <%= form.text_area :avatar_data, id: :profile_avatar_data %>
+    <%= form.file_field :avatar_data, id: :profile_avatar_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :profile_username %>
   </div>
 
   <div class="field">
@@ -27,8 +32,23 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :profile_user_id %>
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :profile_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode, id: :profile_postcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :profile_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :profile_country %>
   </div>
 
   <div class="actions">
