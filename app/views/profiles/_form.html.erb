@@ -2,7 +2,7 @@
 <div class="card mx-auto col-10">
   <div class="card-body card_field">
 
-    <%= form_with(model: profile, local: true) do |form| %>
+    <%= form_with(model: profile, url: profiles_path, local: true) do |form| %>
       <% if profile.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
