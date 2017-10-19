@@ -14,4 +14,44 @@
  *= require_self
  */
 
- @import "bootstrap";
+body {
+  margin: 0;
+}
+
+.logo_box {
+  width: 90%;
+}
+
+.logo_home {
+  width: 100%;
+}
+
+.card_field {
+  text-align: center;
+}
+
+.text_fields {
+  text-align: center;
+}
+
+.footer_links {
+  text-align: center;
+}
+
+
+/* Item card styles */
+.card-body {
+  padding: 0;
+}
+
+.items_card {
+  margin: 10px;
+  padding: 3px;
+}
+
+.items_card_image {
+  width: 95%;
+  margin-top: 5px;
+  border-radius: 3px;
+  display: block;
+}
