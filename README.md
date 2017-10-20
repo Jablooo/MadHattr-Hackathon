@@ -27,3 +27,4 @@ We decided to design for mobile first.
 - Price limit crashes application
 - Deployment issues related to postgres
 - No seed database
+- Rubocop doesn't like lines with more than 80 characters
