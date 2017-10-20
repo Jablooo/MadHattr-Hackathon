@@ -4,13 +4,13 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    redirect_to edit_profiles_url if @profile.nil?
+    redirect_to new_profiles_url if @profile.nil?
   end
 
   # GET /profiles/new
@@ -78,6 +78,15 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:avatar_data, :username, :first_name, :last_name, :address, :postcode, :city, :country, :user_id)
+      params.require(:profile).permit(
+        :avatar,
+        :username,
+        :first_name,
+        :last_name,
+        :address,
+        :postcode,
+        :city,
+        :country,
+        :user_id)
     end
 end

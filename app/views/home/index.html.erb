@@ -1,2 +1,93 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= render "nav" %>
+
+<div class="search_box">
+  <%= form_tag(root_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Hats" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
+
+
+<!-- Items preview -->
+
+<div class="container user_photo_feed">
+    <div class="row justify-content-start">
+      <%= @item.reverse.each do |item| %>
+
+      <div class="col-6 col-sm-4">
+          <div class="card items_card">
+            <div class="card-body">
+              <%= link_to (image_tag (item.image_url), :class => 'card-img-top feed_grid'), item_path(item.id) %>
+              <p><%= item.name %></p>
+              <p><%= item.price %></p>
+            </div>
+          </div>
+      </div>
+
+      <% end %>
+    </div>
+</div>
+
+<div class="container user_photo_feed">
+  <div class="row justify-content-around">
+    <div class="col-6 col-sm-4">
+      <div class="card items_card">
+        <div class="card-body">
+        <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+        <p class="item_name">PUT ITEM HERE</p>
+        <p class="item_price">$100.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4">
+        <div class="card items_card">
+          <div class="card-body">
+          <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+          <p class="item_name">PUT ITEM NAME HERE</p>
+          <p class="item_price">$100.00</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-6 col-sm-4">
+      <div class="card items_card">
+        <div class="card-body">
+        <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+        <p class="item_name">PUT ITEM NAME HERE</p>
+        <p class="item_price">$100.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4">
+      <div class="card items_card">
+        <div class="card-body">
+        <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+        <p class="item_name">PUT ITEM NAME HERE</p>
+        <p class="item_price">$100.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4">
+      <div class="card items_card">
+        <div class="card-body">
+        <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+        <p class="item_name">PUT ITEM NAME HERE</p>
+        <p class="item_price">$100.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-sm-4">
+      <div class="card items_card">
+        <div class="card-body">
+        <%= image_tag("batman.jpeg", class: "items_card_image mx-auto") %>
+        <p class="item_name">PUT ITEM NAME HERE</p>
+        <p class="item_price">$100.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

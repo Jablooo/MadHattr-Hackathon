@@ -14,6 +14,11 @@
  *= require_self
  */
 
+. {
+  font-family: 'Quicksand', sans-serif;
+
+}
+
 body {
   margin: 0;
 }
@@ -38,6 +43,10 @@ body {
   text-align: center;
 }
 
+.navbar-brand {
+
+}
+
 
 /* Item card styles */
 .card-body {
@@ -45,8 +54,10 @@ body {
 }
 
 .items_card {
-  margin: 10px;
+  margin: 5px;
   padding: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .items_card_image {
@@ -54,4 +65,17 @@ body {
   margin-top: 5px;
   border-radius: 3px;
   display: block;
+}
+
+.col-6 {
+  padding: 0;
+}
+
+
+/*home page*/
+.search_box {
+  text-align: center;
+  height: 50px;
+  padding-top: 15px;
+
 }
