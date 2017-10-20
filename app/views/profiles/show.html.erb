@@ -31,11 +31,16 @@
     <div class="row justify-content-start">
       <% @profile.user.items.reverse.each do |item| %>
 
-      <div class="grid col-4 col-sm-7">
-
-        <img class="card-img-top feed_grid" src="<%= item.image_url %>">
-
+      <div class="col-6 col-sm-4">
+          <div class="card items_card">
+            <div class="card-body">
+              <%= link_to (image_tag (item.image_url), :class => 'card-img-top feed_grid'), item_path(item.id) %>
+              <p><%= item.name %></p>
+              <p><%= item.price %></p>
+            </div>
+          </div>
       </div>
+
       <% end %>
     </div>
 
