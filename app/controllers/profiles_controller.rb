@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+
   end
 
   # GET /profiles/1
@@ -79,7 +79,7 @@ class ProfilesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
       params.require(:profile).permit(
-        :avatar, 
+        :avatar,
         :username,
         :first_name,
         :last_name,

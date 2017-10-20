@@ -1,3 +1,53 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.card_avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: -15px;
+}
+
+.profile_avatar {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.profile_box {
+  margin-top: 70px;
+}
+
+.profile_username {
+  font-size: 1.5em;
+}
+
+.profile_name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.user_photo_feed {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.grid {
+  padding: 0;
+  margin: 0;
+}
+
+.feed_grid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
