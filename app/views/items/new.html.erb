@@ -1,5 +1,10 @@
-<h1>New Item</h1>
+
+<%= render "home/nav" %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<h1 class="card_field">New Item</h1>
 
 <%= render 'form', item: @item %>
 
-<%= link_to 'Back', items_path %>
+<%= link_to 'Back', root_path %>
+<br>

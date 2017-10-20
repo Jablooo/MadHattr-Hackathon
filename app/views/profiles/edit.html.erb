@@ -1,7 +1,19 @@
 <h1>Editing Profile</h1>
 
-<%= render 'form', profile: @profile %>
 
-<%#= link_to 'Show', @profile %>
+<div class="container">
+  <div class="row">
+    <div class="card mx-auto col-12 col-sm-5">
+      <img class="card-img-top feed_photo" src="<%= @profile.avatar_url %>">
+    </div>
+    <div class="card copy_card mx-auto col-12 col-sm-5">
+      <%= render 'form', profile: @profile %>
+
+    </div>
+  </div>
+</div>
+
+
+
 <%= link_to 'Back', profiles_path %>
 <br>

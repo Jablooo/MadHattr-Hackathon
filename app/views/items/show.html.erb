@@ -2,42 +2,29 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @item.style %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="card mx-auto col-12 col-sm-5">
+      <img class="card-img-top feed_photo" src="<%= @item.image_url %>">
+    </div>
+    <div class="card copy_card mx-auto col-12 col-sm-5">
+        <div class="card-body">
+          <div class="text_box">
+            <p class="card-text"><span class="item_name"><%= @item.name %></span></p>
+            <p class="card-text"><span class="item_name"><%= @item.price %></span></p>
+            <p class="card-text"><span class="item_desc"><%= @item.description %></span></p>
+            <p class="card-text"><span class="item_cond"><%= @item.condition %></span></p>
+          </div>
+          <% if @item.user == current_user %>
+              <%= link_to 'Edit Item', edit_item_path(@item), class: "btn btn-outline-dark" %>
+          <% else %>
+              <%= link_to 'Buy', new_charge_path, class: "btn btn-outline-dark" %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Image data:</strong>
-  <%= @item.image_data %>
-  <%= image_tag @item.image_url, :class => 'item_image' %>
-
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= @item.condition %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<!-- <p>
-  <strong>User:</strong>
-  <%#= @item.user %>
-</p> -->
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', root_path %>
