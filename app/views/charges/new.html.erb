@@ -1,18 +1,38 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"></script>
-<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="card mx-auto col-12 col-sm-5">
+      <img class="card-img-top feed_photo" src="<%= @item.image_url %>">
+    </div>
+    <div class="card copy_card mx-auto col-12 col-sm-5">
+        <div class="card-body">
+          <div class="text_box">
+            <%= form_tag item_charges_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+
+                <p class="card-text"><span class="item_name"><%= @item.name %></span></p>
+                <p class="card-text"><span class="item_desc"><%= @item.description %></span></p>
+                <p class="card-text"><span class="item_cond"><%= @item.condition %></span></p>
+
+                <label class="amount">
+                  <span>Amount: $ <%= @item.price %></span>
+                </label>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="Your Mad Hattr Order"
+                      data-amount="<%= @item.price.to_int * 100%>"
+                      data-locale="auto"></script>
+            <% end %>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

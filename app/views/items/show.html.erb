@@ -18,7 +18,7 @@
           <% if @item.user == current_user %>
               <%= link_to 'Edit Item', edit_item_path(@item), class: "btn btn-outline-dark" %>
           <% else %>
-              <%= link_to 'Buy', new_charge_path, class: "btn btn-outline-dark" %>
+              <%= link_to 'Buy', new_item_charge_path(@item), class: "btn btn-outline-dark" %>
           <% end %>
         </div>
     </div>
