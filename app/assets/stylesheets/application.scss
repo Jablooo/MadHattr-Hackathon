@@ -27,6 +27,12 @@ body {
   width: 90%;
 }
 
+@media screen and (min-width: 500px) {
+  .logo_box {
+    width: 50%;
+  }
+}
+
 .logo_home {
   width: 100%;
 }
