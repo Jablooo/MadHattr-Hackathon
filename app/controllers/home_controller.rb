@@ -2,6 +2,14 @@ class HomeController < ApplicationController
   def index
     @item = Item.all
     @profiles = Profile.all
+
+    @item = Item.all
+    if params[:search]
+      @item = Item.search(params[:search]).order("created_at DESC")
+    else
+      @item = Item.all.order("created_at DESC")
+    end
+
   end
 
   private

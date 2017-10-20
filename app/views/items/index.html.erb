@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Items</h1>
-
+<div class="search_box">
+  <%= form_tag(items_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Hats" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
 <table>
   <thead>
     <tr>

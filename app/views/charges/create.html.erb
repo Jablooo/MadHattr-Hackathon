@@ -1,1 +1,25 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+<%= render "home/nav" %>
+<div class="logo_box mx-auto">
+  <%= image_tag("mad-hattr-logo.png", class: "logo_home") %>
+</div>
+
+<h2 class="card_field">Thanks, you paid <strong>$ <%= @item.price %></strong>!</h2>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="card mx-auto col-12 col-sm-5">
+      <img class="card-img-top feed_photo" src="<%= @item.image_url %>">
+    </div>
+    <div class="card copy_card mx-auto col-12 col-sm-5">
+        <div class="card-body">
+          <div class="text_box">
+            <p class="card-text"><span class="item_name">You now own <%= @item.name %></span></p>
+            <p class="card-text"><span class="item_desc"><%= @item.description %></span></p>
+            <p class="card-text"><span class="item_cond"><%= @item.condition %></span></p>
+          </div>
+              <%= link_to 'Home', root_path, class: "btn btn-outline-dark" %>
+        </div>
+    </div>
+  </div>
+</div>

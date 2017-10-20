@@ -16,7 +16,7 @@
       <br>
 
       <div class="field">
-        <%= form.select :style, ['Cap', 'Trilby', 'Beanie', 'Fedora', 'Flatcap', 'Trucker', 'Snapback', 'Bucket', 'Five Panel', 'Pirate', 'Bowler', 'Cowboy']%>
+        <%= form.select :style, ['Cap', 'Trilby', 'Beanie', 'Fedora', 'Flatcap', 'Trucker', 'Snapback', 'Bucket', 'Five Panel', 'Pirate', 'Bowler', 'Cowboy'], id: :item_style%>
       </div>
 
       <div class="field">
@@ -32,7 +32,7 @@
       </div>
 
       <div class="field">
-        <%= form.text_field :condition, placeholder: "Condition", id: :item_condition, class:"text_fields" %>
+        <%= form.select :condition, ['New', 'Used'], id: :item_image_condition %>
       </div>
 
       <div class="field">
