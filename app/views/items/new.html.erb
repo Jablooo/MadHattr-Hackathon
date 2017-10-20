@@ -1,8 +1,10 @@
 
 <%= render "home/nav" %>
+<%= link_to image_tag("icon_back.png", class: "back-icon"), 'javascript:history.go(-1);', class: "nav-link" %>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<h1 class="card_field">New Item</h1>
+<h1 class="card_field">Sell Hat</h1>
 
 <%= render 'form', item: @item %>
 
