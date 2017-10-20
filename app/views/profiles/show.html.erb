@@ -1,45 +1,47 @@
+<%= render "home/nav" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Avatar data:</strong>
-  <%= image_tag @profile.avatar_url, :class => 'profile_avatar' %>
 
-</p>
+<div class="container profile_box">
+  <div class="row">
+    <div class= "col-5">
+      <%= image_tag @profile.avatar_url, :class => 'profile_avatar' %>
 
-<p>
-  <strong>Username:</strong>
-  <%= @profile.username %>
-</p>
+    </div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
+    <div class="col-7">
+      <p class="profile_username"><%= @profile.username %></p>
+      <p class="profile_name"><%= @profile.first_name + " " + @profile.last_name %></p>
+      <p class="profile_bio"><%=  @profile.address  + " " + @profile.postcode + " " + @profile.city  + " " + @profile.country %></p>
+        <% if @profile.user == current_user %>
+            <%= link_to 'Edit Profile', edit_profiles_path, class: "btn btn-outline-dark" %>
+        <% end %>
+    </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+    <div class="col-12">
+    </div>
 
-<p>
-  <strong>Postcode:</strong>
-  <%= @profile.postcode %>
-</p>
+  </div>
+</div>
 
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @profile.country %>
-</p>
+<div class="container user_photo_feed">
+    <div class="row justify-content-start">
+      <%= @profile.user.items.reverse.each do |item| %>
+
+      <div class="grid col-4 col-sm-7">
+
+        <img class="card-img-top feed_grid" src="<%= item.image_url.inspect %>">
+
+      </div>
+      <% end %>
+    </div>
+
+</div>
+
+
 
 <%= link_to 'Edit', edit_profiles_path %>
 <%= link_to 'Back', root_path %>

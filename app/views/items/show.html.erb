@@ -1,3 +1,5 @@
+<%= render "home/nav" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -18,6 +20,8 @@
 <p>
   <strong>Image data:</strong>
   <%= @item.image_data %>
+  <%= image_tag @item.image_url, :class => 'item_image' %>
+
 </p>
 
 <p>
