@@ -9,6 +9,13 @@
   border-radius: 50%;
 }
 
+@media screen and (min-width: 500px) {
+  .profile_avatar{
+    height: 200px;
+    width: 200px;
+  }
+}
+
 .profile_box {
   margin-top: 70px;
 }
