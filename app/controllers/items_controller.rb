@@ -6,6 +6,14 @@ class ItemsController < ApplicationController
   def index
     @item = Item.all
     @profiles = Profile.all
+
+    @item = Item.all
+    if params[:search]
+      @item = Item.search(params[:search]).order("created_at DESC")
+    else
+      @item = Item.all.order("created_at DESC")
+    end
+
   end
 
   # GET /items/1
@@ -62,6 +70,7 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
