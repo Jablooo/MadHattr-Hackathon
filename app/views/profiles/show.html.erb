@@ -29,11 +29,11 @@
 
 <div class="container user_photo_feed">
     <div class="row justify-content-start">
-      <%= @profile.user.items.reverse.each do |item| %>
+      <% @profile.user.items.reverse.each do |item| %>
 
       <div class="grid col-4 col-sm-7">
 
-        <img class="card-img-top feed_grid" src="<%= item.image_url.inspect %>">
+        <img class="card-img-top feed_grid" src="<%= item.image_url %>">
 
       </div>
       <% end %>
