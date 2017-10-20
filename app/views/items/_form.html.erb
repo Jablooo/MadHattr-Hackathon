@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :style %>
-    <%= form.text_field :style, id: :item_style %>
+    <%= form.select :style, ['Cap', 'Trilby', 'Beanie', 'Fedora', 'Flatcap', 'Trucker', 'Snapback', 'Bucket', 'Five Panel', 'Pirate', 'Bowler', 'Cowboy']%>
   </div>
 
   <div class="field">
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :item_description %>
+    <%= form.text_area :description, id: :item_description %>
   </div>
 
   <div class="field">
