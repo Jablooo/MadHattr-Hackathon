@@ -1,24 +1,31 @@
-# README
+# HACKATHON
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create a webapp in a day using Ruby on Rails and deploying it.
 
-Things you may want to cover:
+Programmes used: Trello, GitHub, RubyonRails, http://dbdesigner.net, mockplus, Heroku
+Gems used: bootstrap, stripe, shrine, shrine-cloudinary, devise
 
-* Ruby version
+Trello -  https://trello.com/b/4HTI6TT0
 
-* System dependencies
+Heroku - https://mad-hattr.herokuapp.com
 
-* Configuration
 
-* Database creation
+# PROBLEM
 
-* Database initialization
+Creating a two-sided market place for all your hat buying/selling needs.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# DESIGN PROCESS
 
-* Deployment instructions
+Started on Trello with User stories, followed by what steps/tasks will be needed
+to get the project to deployed by 5pm Friday. Prioritised ERD and wireframes first.
+We decided to design for mobile first.
 
-* ...
+
+# ISSUES ENCOUNTERED
+
+- Passing variables from one 'environment' to another
+- Price limit crashes application
+- Deployment issues related to postgres
+- No seed database
+- Ran Rubocop a lot of the errors are because Rubocop doesn't like lines with more than 80 characters
