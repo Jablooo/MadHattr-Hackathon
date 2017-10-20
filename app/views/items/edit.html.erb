@@ -1,7 +1,26 @@
-<h1>Editing Item</h1>
+<%= render "home/nav" %>
 
-<%= render 'form', item: @item %>
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="card mx-auto col-12 col-sm-5">
+      <img class="card-img-top feed_photo" src="<%= @item.image_url %>">
+    </div>
+    <div class="card copy_card mx-auto col-12 col-sm-5">
+        <div class="card-body">
+          <div class="text_box">
+
+            <%= render 'form', item: @item %>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
 <br>

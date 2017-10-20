@@ -18,6 +18,10 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+#notice {
+  text-align: center;
+}
+
 body {
   margin: 0;
 }
@@ -38,6 +42,7 @@ body {
 
 .card_field {
   text-align: center;
+  
 }
 
 .text_fields {
@@ -72,6 +77,19 @@ body {
   display: block;
 }
 
+.text_box {
+  text-align: center;
+}
+
+.item_name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.item_price {
+  font-size: 1.5em;
+}
+
 .col-6 {
   padding: 0;
 }
@@ -83,4 +101,15 @@ body {
   height: 50px;
   padding-top: 15px;
 
+}
+
+
+// show page card
+.copy_card {
+  padding-top: 10%;
+  border: none;
+}
+
+.btn {
+  margin-top: 10px;
 }

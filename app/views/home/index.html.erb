@@ -12,14 +12,16 @@
 
 <div class="container user_photo_feed">
     <div class="row justify-content-start">
-      <%= @item.reverse.each do |item| %>
+      <% @item.reverse.each do |item| %>
 
       <div class="col-6 col-sm-4">
           <div class="card items_card">
             <div class="card-body">
               <%= link_to (image_tag (item.image_url), :class => 'card-img-top feed_grid'), item_path(item.id) %>
-              <p><%= item.name %></p>
-              <p><%= item.price %></p>
+              <div class="text_box">
+                <p class="card-text"><span class="item_name"><%= item.name %></span></p>
+                <p class="card-text"><span class="item_price"><%= item.price %></span></p>
+              </div>
             </div>
           </div>
       </div>
