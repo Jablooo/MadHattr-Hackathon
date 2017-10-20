@@ -6,6 +6,7 @@ Programmes used: Trello, GitHub, RubyonRails, http://dbdesigner.net, mockplus, H
 Gems used: bootstrap, stripe, shrine, shrine-cloudinary, devise
 
 Trello -  https://trello.com/b/4HTI6TT0
+
 Heroku - https://mad-hattr.herokuapp.com
 
 
@@ -27,4 +28,4 @@ We decided to design for mobile first.
 - Price limit crashes application
 - Deployment issues related to postgres
 - No seed database
-- Rubocop doesn't like lines with more than 80 characters
+- Ran Rubocop a lot of the errors are because Rubocop doesn't like lines with more than 80 characters
