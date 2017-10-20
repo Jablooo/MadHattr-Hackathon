@@ -9,6 +9,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem "shrine"
 gem "shrine-cloudinary"
+gem 'stripe'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
