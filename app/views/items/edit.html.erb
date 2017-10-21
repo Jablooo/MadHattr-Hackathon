@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="card mx-auto col-12 col-sm-5">
+    <div class="card mx-auto solo_card col-12 col-sm-5">
       <img class="card-img-top feed_photo" src="<%= @item.image_url(:angle=>"exif", :gravity=>"auto", :height=>500, :width=>500, :crop=>"fill") %>">
 
     </div>
@@ -22,7 +22,3 @@
     </div>
   </div>
 </div>
-
-
-<%= link_to 'Show', @item%>
-<br>
