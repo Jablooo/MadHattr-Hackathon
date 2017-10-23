@@ -1,5 +1,5 @@
+# initial comment
 class ImageUploader < Shrine
-
   plugin :activerecord
   plugin :determine_mime_type
   plugin :logging, logger: Rails.logger
@@ -11,7 +11,4 @@ class ImageUploader < Shrine
     validate_max_size 2.megabytes, message: 'is too large (max is 2 MB)'
     validate_mime_type_inclusion ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
   end
-
-
-
 end

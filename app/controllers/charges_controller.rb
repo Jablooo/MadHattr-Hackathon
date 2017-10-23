@@ -1,3 +1,4 @@
+# initial comment
 class ChargesController < ApplicationController
   def new
     @items = Item.all
@@ -10,23 +11,23 @@ class ChargesController < ApplicationController
     @amount = 500
 
     customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
+      email: params[:stripeEmail],
+      source: params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
-      :description => 'Rails Stripe customer',
-      :currency    => 'usd'
+      customer:    customer.id,
+      amount:      @amount,
+      description: 'Rails Stripe customer',
+      currency:    'usd'
     )
-
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
   end
 
-private
+  private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_item
     @item = Item.find(params[:id])

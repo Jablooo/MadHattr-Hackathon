@@ -1,3 +1,4 @@
+# initial comment
 class Item < ApplicationRecord
   belongs_to :user
 
@@ -6,5 +7,4 @@ class Item < ApplicationRecord
   def self.search(search)
     where("name ILIKE ? OR description ILIKE ? OR condition ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
-
 end

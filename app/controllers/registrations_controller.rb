@@ -1,3 +1,4 @@
+# initial comment
 class RegistrationsController < Devise::RegistrationsController
   protected
 
