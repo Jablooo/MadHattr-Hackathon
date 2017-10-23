@@ -61,6 +61,9 @@ body {
   height: 30px;
 }
 
+.field {
+  text-align: center;
+}
 
 /* Item card styles */
 .card-body {
@@ -121,6 +124,20 @@ body {
 
 .btn {
   margin-top: 10px;
+}
+
+.card_avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.solo_card {
+  padding: 1% 1% 1%;
+}
+
+.seller_row {
+  margin: 10px;
 }
 
 .btn-outline-dark {

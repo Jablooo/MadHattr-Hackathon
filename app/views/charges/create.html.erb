@@ -1,6 +1,6 @@
 <%= render "home/nav" %>
 <div class="logo_box mx-auto">
-  <%= image_tag("mad-hattr-logo.png", class: "logo_home") %>
+  <%= image_tag("mad-hattr-logo.svg", class: "logo_home") %>
 </div>
 
 <h2 class="card_field">Thanks, you paid <strong>$ <%= @item.price %></strong>!</h2>
@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="card mx-auto col-12 col-sm-5">
-      <img class="card-img-top feed_photo" src="<%= @item.image_url %>">
+      <img class="card-img-top feed_photo" src="<%= @item.image_url(:angle=>"exif", :gravity=>"auto", :height=>500, :width=>500, :crop=>"fill") %>">
     </div>
     <div class="card copy_card mx-auto col-12 col-sm-5">
         <div class="card-body">
