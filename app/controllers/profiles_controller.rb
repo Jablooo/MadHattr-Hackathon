@@ -1,11 +1,10 @@
+# initial comment
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /profiles
   # GET /profiles.json
-  def index
-
-  end
+  def index; end
 
   # GET /profiles/1
   # GET /profiles/1.json
@@ -65,28 +64,30 @@ class ProfilesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_profile
-      if params[:id]
 
-        @profile = Profile.find_by!(user_id: params[:id])
-      else
+  # Use callbacks to share common setup or constraints between actions.
+  def set_profile
+    if params[:id]
 
-        @profile = Profile.find_by(user: current_user)
-      end
+      @profile = Profile.find_by!(user_id: params[:id])
+    else
+
+      @profile = Profile.find_by(user: current_user)
     end
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def profile_params
-      params.require(:profile).permit(
-        :avatar,
-        :username,
-        :first_name,
-        :last_name,
-        :address,
-        :postcode,
-        :city,
-        :country,
-        :user_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def profile_params
+    params.require(:profile).permit(
+      :avatar,
+      :username,
+      :first_name,
+      :last_name,
+      :address,
+      :postcode,
+      :city,
+      :country,
+      :user_id
+    )
+  end
 end
