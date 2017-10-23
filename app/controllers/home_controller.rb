@@ -5,11 +5,11 @@ class HomeController < ApplicationController
     @profiles = Profile.all
 
     @item = Item.all
-    if params[:search]
-      @item = Item.search(params[:search]).order("created_at DESC")
-    else
-      @item = Item.all.order("created_at DESC")
-    end
+    @item = if params[:search]
+              Item.search(params[:search]).order("created_at DESC")
+            else
+              Item.all.order("created_at DESC")
+            end
   end
 
   private

@@ -65,16 +65,29 @@ class ProfilesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
+  # Use callbacks to share common setup or constraints between actions. CORRECTED METHOD BY RUBOCOP
   def set_profile
-    if params[:id]
+    @profile = if params[:id]
 
-      @profile = Profile.find_by!(user_id: params[:id])
-    else
+                 Profile.find_by!(user_id: params[:id])
+               else
 
-      @profile = Profile.find_by(user: current_user)
-    end
+                 Profile.find_by(user: current_user)
+               end
   end
+  # _________________________
+  # ORIGINAL PIECE OF CODE BEFORE RUBOCOP. CONVENTION
+  # _________________________
+  # def set_profile
+  #   if params[:id]
+  #
+  #     @profile = Profile.find_by!(user_id: params[:id])
+  #   else
+  #
+  #     @profile = Profile.find_by(user: current_user)
+  #   end
+  # end
+  # _________________________
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def profile_params
