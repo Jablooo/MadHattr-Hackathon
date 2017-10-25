@@ -1,8 +1,8 @@
 # HACKATHON
 Create a webapp in a day using Ruby on Rails and deploying it.
 
-Programmes used: Trello, GitHub, RubyonRails, http://dbdesigner.net, mockplus, Heroku
-Gems used: bootstrap, stripe, shrine, shrine-cloudinary, devise
+- Programmes used: Trello, GitHub, RubyonRails, http://dbdesigner.net, mockplus, Heroku
+- Gems used: bootstrap, stripe, shrine, shrine-cloudinary, devise
 
 Heroku - https://mad-hattr.herokuapp.com
 
@@ -17,18 +17,22 @@ We decided to design for mobile first.
 ### User Stories
 [Link to Trello User Stories](https://trello.com/b/4HTI6TT0)
 ![User Stories](/docs/img/User_Stories.png)
+###### trello
 
 ### ERD
 ![ERD](/docs/img/ERD.png)
+###### dbdesigner.net
 
 ### Wireframes
 ![Wireframes](/docs/img/Wireframes.png)
+###### mockplus
 
-## Gems Used
-Devise for authentication
-Shrine and Cloudinary for file uploads
-Stripe for payments
-Bootstrap for CSS
+## Features implemented
+- Authentication (Devise)
+- File uploads (Shrine and Cloudinary)
+- Payments (Stripe)
+- Search function
+- Testing (Rubocop)
 
 ## Git Branches
 ![Git Flow](/docs/img/Git_Branches.png)
@@ -38,4 +42,3 @@ Bootstrap for CSS
 - Price limit crashes application
 - Deployment issues related to postgres
 - No seed database
-- Ran Rubocop a lot of the errors are because Rubocop doesn't like lines with more than 80 characters
