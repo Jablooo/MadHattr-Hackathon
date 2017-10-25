@@ -1,5 +1,4 @@
 # HACKATHON
-
 Create a webapp in a day using Ruby on Rails and deploying it.
 
 Programmes used: Trello, GitHub, RubyonRails, http://dbdesigner.net, mockplus, Heroku
@@ -7,14 +6,10 @@ Gems used: bootstrap, stripe, shrine, shrine-cloudinary, devise
 
 Heroku - https://mad-hattr.herokuapp.com
 
-
 ## PROBLEM
-
 Creating a two-sided market place for all your hat buying/selling needs.
 
-
 ## DESIGN PROCESS
-
 Started on Trello with User stories, followed by what steps/tasks will be needed
 to get the project to deployed by 5pm Friday. Prioritised ERD and wireframes first.
 We decided to design for mobile first.
@@ -24,20 +19,21 @@ We decided to design for mobile first.
 ![User Stories](/docs/img/User_Stories.png)
 
 ### ERD
-![User Stories](/docs/img/ERD.png)
+![ERD](/docs/img/ERD.png)
 
 ### Wireframes
-![User Stories](/docs/img/Wireframes.png)
+![Wireframes](/docs/img/Wireframes.png)
 
-- [ ] User Stories
-- [x] User Stories
+## Gems Used
+Devise for authentication
+Shrine and Cloudinary for file uploads
+Stripe for payments
+Bootstrap for CSS
 
-----
-___
-
+## Git Branches
+![Git Flow](/docs/img/Git_Branches.png)
 
 ## ISSUES ENCOUNTERED
-
 - Passing variables from one 'environment' to another
 - Price limit crashes application
 - Deployment issues related to postgres
